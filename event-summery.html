@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event summery</title>
+</head>
+<body>
+	<h1 id="default-text">Default text</h1>
+	<button onclick="handleClick()">Handle inner Text by onclick</button>
+
+    <h1 id="input-value">Input value</h1>
+	<input type="text" name="" id="input-text">
+	<button id="btn-update">Update</button>
+
+
+	<script>
+		function handleClick(){
+			document.getElementById('default-text').innerText='Change by onclick';
+
+		}
+		document.getElementById('btn-update').addEventListener('click',function(){
+			let innerText=document.getElementById('input-text').value;
+			document.getElementById('input-value').innerText=innerText;
+			// document.getElementById("input-text").value='';
+			
+		})
+
+	</script>
+</body>
+</html>
