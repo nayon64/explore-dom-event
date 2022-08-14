@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Github</title>
+</head>
+<body>
+	<main>
+		<h1 id="github-rep">This is github repositiory</h1>
+		<input type="text" name="" id="input-text1">
+		<button id="btn-delect" disabled>Delect</button>
+	</main>
+	<script>
+		document.getElementById('input-text1').addEventListener('keyup',function(event){
+			const text =event.target.value;
+			const delectBtn= document.getElementById('btn-delect')
+			if(text === 'delect'){
+				delectBtn.removeAttribute('disabled')
+			}
+			else{
+				delectBtn.setAttribute('disabled',true)
+			}
+			document.getElementById('btn-delect').addEventListener('click', function(){
+					document.getElementById('github-rep').style.display="none";
+				})
+		})
+		
+	</script>
+</body>
+</html>
